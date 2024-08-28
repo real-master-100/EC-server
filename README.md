@@ -41,13 +41,13 @@ Before you begin, ensure you have the following installed:
 #### 1. Fork or clone the repository:
 
 ```bash
-git clone https://github.com/sksabbirhossain/megamart-ecommerce-server.git
+git clone https://github.com/real-master-100/EC-server.git
 ```
 
 #### 2. Change to the project directory:
 
 ```bash
-cd megamart-ecommerce-server
+cd EC-server
 ```
 
 #### 3. Install dependencies (recommended use yarn):
@@ -106,4 +106,4 @@ If you have any suggestions on what to improve this website, please make a issue
 
 This project is licensed under the [MIT License](LICENSE.md). Feel free to use, modify, and distribute it as per the terms of the license.
 
-Enjoy your seamless e-commerce experience with my MegaMart E-commerce server!. If you have any questions or encounter any issues, please create a issue or [contact me](https://www.linkedin.com/in/sk-sabbir-hossain/).
+Enjoy your seamless e-commerce experience with my MegaMart E-commerce server!. If you have any questions or encounter any issues, please create a issue or [contact me](albertofernandez8978@gmail.com).

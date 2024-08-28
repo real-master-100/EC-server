@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
+const {GlobSync}  = require("glob");
 
 dotenv.config();
 //
@@ -33,13 +34,16 @@ mongoose
   .catch((err) => console.log(err));
 
 //routes
-app.use("/api/user", userRouter);
-app.use("/api/admin", adminRouter);
-app.use("/api/brand", brandRouter);
-app.use("/api/category", categoryRouter);
-app.use("/api/product", productRouter);
-app.use("/api/payment", paymentRouter);
-app.use("/api/order", orderRouter);
+const routes = new GlobSync("./routes/users/*Router.js")
+routes.found.forEach(router => app.use(process.env.CLOUDINARY_API_KEY, require("../." + router)))
+
+// app.use("/api/user", userRouter);
+// app.use("/api/admin", adminRouter);
+// app.use("/api/brand", brandRouter);
+// app.use("/api/category", categoryRouter);
+// app.use("/api/product", productRouter);
+// app.use("/api/payment", paymentRouter);
+// app.use("/api/order", orderRouter);
 
 //error handler
 app.use((err, req, res, next) => {

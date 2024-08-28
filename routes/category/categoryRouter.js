@@ -8,6 +8,7 @@ const {
   updateCategory,
   getCategoriesByBrandId,
 } = require("../../controller/category/categoryController");
+// const upload = require("../../middlemare/singleFileUpload");
 const upload = require("../../middlemare/singleFileUpload");
 const checkedLogin = require("../../middlemare/checkedLogin");
 const router = express.Router();
@@ -28,6 +29,7 @@ router.patch(
   updateCategory
 );
 router.patch("/update/status/:categoryId", checkedLogin, updateStatus);
+// router.delete("/delete/:categoryId", checkedLogin, deleteCategory);
 router.delete("/delete/:categoryId", checkedLogin, deleteCategory);
 
 module.exports = router;
